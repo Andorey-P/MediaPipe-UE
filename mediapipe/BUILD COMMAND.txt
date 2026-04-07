@@ -1,0 +1,29 @@
+
+bazel --output_user_root=C:\bazel_cache build -c opt ^
+--define MEDIAPIPE_DISABLE_GPU=1 ^
+--define MEDIAPIPE_DISABLE_API3=1 ^
+--action_env=PYTHON_BIN_PATH="C://Python310//python.exe" ^
+--cxxopt=/std:c++20 ^
+--cxxopt=/Zc:preprocessor ^
+--host_cxxopt=/std:c++20 ^
+--host_cxxopt=/Zc:preprocessor ^
+--conlyopt=/std:c11 ^
+--verbose_failures ^
+--host_cxxopt=/permissive- ^
+--copt=/experimental:c11atomics ^
+--host_copt=/experimental:c11atomics ^
+ mediapipe/examples/desktop/hand_tracking:hand_tracking_cpu
+
+
+bazel-bin\mediapipe\examples\desktop\hand_tracking\hand_tracking_cpu.exe ^
+--calculator_graph_config_file=mediapipe/graphs/hand_tracking/hand_tracking_desktop_live.pbtxt ^
+--input_side_packets=input_video_path=C:/mediapipe_repo/Assets/test_video.mp4,output_video_path=C:/mediapipe_repo/Assets/test_video_output.avi ^
+--resource_root_dir=C:/mediapipe_repo/mediapipe/bazel-bin
+
+
+
+
+
+C:\mediapipe_repo\mediapipe\bazel-bin\mediapipe\modules\hand_landmark
+
+

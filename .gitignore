@@ -1,0 +1,40 @@
+# =========================
+# Unreal Engine
+# =========================
+Binaries/
+DerivedDataCache/
+Intermediate/
+Saved/
+.vscode/
+*.sln
+
+# =========================
+# OS
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# C++ / Build
+# =========================
+build/
+out/
+bin/
+obj/
+*.log
+
+# =========================
+# MediaPipe (adapted)
+# =========================
+mediapipe/bazel-*
+mediapipe/MediaPipe.xcodeproj
+mediapipe/MediaPipe.tulsiproj/*.tulsiconf-user
+mediapipe/provisioning_profile.mobileprovision
+mediapipe/node_modules/
+mediapipe/.configure.bazelrc
+mediapipe/.user.bazelrc
+
+# Optional (recommended additions)
+mediapipe/.cache/
+mediapipe/out/
+mediapipe/build/
